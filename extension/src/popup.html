@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Stretchtext Anywhere</title>
+    <style>
+      :root {
+        --bg: #101014;
+        --fg: #f4f1ea;
+        --muted: #9a9aa8;
+        --accent: #d8ff5c;
+        --line: #26262f;
+        font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+      }
+      body {
+        width: 288px;
+        margin: 0;
+        padding: 14px;
+        background: var(--bg);
+        color: var(--fg);
+        font-size: 13px;
+        line-height: 1.45;
+      }
+      h1 {
+        margin: 0 0 2px;
+        font-size: 14px;
+        letter-spacing: 0.01em;
+      }
+      p {
+        margin: 6px 0;
+        color: var(--muted);
+      }
+      .state {
+        margin: 10px 0;
+        padding: 9px 10px;
+        border: 1px solid var(--line);
+        border-radius: 10px;
+        font-size: 12px;
+      }
+      .state strong {
+        color: var(--fg);
+      }
+      button {
+        width: 100%;
+        margin-top: 8px;
+        padding: 8px 10px;
+        border-radius: 999px;
+        border: 1px solid var(--line);
+        background: transparent;
+        color: var(--fg);
+        font: 600 12px/1 system-ui, sans-serif;
+        cursor: pointer;
+      }
+      button.primary {
+        background: var(--accent);
+        border-color: #b6e03a;
+        color: #10120a;
+      }
+      button:disabled {
+        opacity: 0.5;
+        cursor: default;
+      }
+      .code {
+        margin: 10px 0 4px;
+        padding: 12px;
+        border-radius: 10px;
+        background: #1a1a22;
+        border: 1px dashed var(--line);
+        text-align: center;
+        font: 700 20px/1.2 ui-monospace, Menlo, monospace;
+        letter-spacing: 0.16em;
+      }
+      .error {
+        color: #ff9a8c;
+      }
+      ol {
+        padding-left: 16px;
+        margin: 8px 0 0;
+        color: var(--muted);
+        font-size: 12px;
+      }
+      kbd {
+        background: #1c1c24;
+        border: 1px solid var(--line);
+        border-radius: 4px;
+        padding: 1px 5px;
+        font: 600 11px/1 ui-monospace, monospace;
+      }
+      .hidden {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Stretchtext Anywhere</h1>
+    <p>Select a passage, click Stretch, click the grown text to shrink it.</p>
+
+    <div class="state" id="state">Checking sign-in…</div>
+
+    <div id="device" class="hidden">
+      <p>Enter this code at the page that just opened:</p>
+      <div class="code" id="code">····-····</div>
+    </div>
+
+    <button class="primary" id="connect" hidden>Connect with Pollinations</button>
+    <button id="signout" hidden>Disconnect</button>
+    <p class="error hidden" id="error"></p>
+
+    <ol>
+      <li>Sign in so every stretch is paid from your own Pollen.</li>
+      <li>Select text on any page, then click <strong>Stretch</strong>.</li>
+      <li>Click the underlined passage to collapse it again.</li>
+      <li><kbd>Esc</kbd> hides the pill.</li>
+    </ol>
+
+    <script type="module" src="popup.js"></script>
+  </body>
+</html>

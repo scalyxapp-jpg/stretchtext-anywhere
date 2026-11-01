@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Stretchtext Anywhere — grow any passage where it stands</title>
+    <meta
+      name="description"
+      content="A browser extension that turns any web page into stretchtext: select a passage and it grows in place, paid from your own Pollen."
+    />
+    <meta property="og:title" content="Stretchtext Anywhere" />
+    <meta
+      property="og:description"
+      content="Ted Nelson described text that grows where the reader wants more. Forty years of writing every level by hand ended that idea. Generated text brings it back."
+    />
+    <meta name="theme-color" content="#101014" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <p class="eyebrow">Browser extension · MIT</p>
+      <h1>Stretchtext Anywhere</h1>
+      <p class="lede">
+        Select any passage on any page. It grows where it stands, in the
+        author's voice. Click it again and it shrinks back to the words that
+        were there.
+      </p>
+      <div class="cta">
+        <a class="button" href="https://github.com/scalyxapp-jpg/stretchtext-anywhere">
+          Install from source
+        </a>
+        <polli-connect
+          app-key="pk_eiJdmWAWwoCFXign"
+          budget="5"
+          expiry="7"
+          hide-buy-pollen
+        ></polli-connect>
+      </div>
+      <p class="hint" id="demo-state">
+        The demo below works right here. The extension works on every page.
+      </p>
+    </header>
+
+    <main>
+      <article id="demo-article">
+        <h2>A text that answers back</h2>
+        <p>
+          In 1967 Ted Nelson described a kind of writing that does not unfold
+          all at once: a passage that opens where the reader wants more, and
+          closes where they already know. He called it stretchtext, and for
+          fifty years almost nobody used it, because every level had to be
+          written by hand.
+        </p>
+        <p>
+          The reason is arithmetic. Three levels of detail turn one paragraph
+          into eighteen, and the writer usually knows only the first. What
+          made stretchtext impractical was never the reading. It was the
+          writing.
+        </p>
+        <p>
+          Generated text changes that arithmetic. A reader can ask for the
+          next level at the exact place the question appears, and get it there,
+          without leaving the sentence they were already reading.
+        </p>
+        <blockquote>
+          Reading about a sixth of the words, and understanding more of them.
+          That is the promise of a text that only grows where you pull.
+        </blockquote>
+        <p>
+          Try it. Select a phrase below, or anywhere on this page, and press
+          Stretch. The passage is replaced by a longer one; the underline marks
+          what grew. Click it to put the original back.
+        </p>
+        <p class="practice">
+          A river slows where it widens, drops what it carries, and leaves a
+          new bank behind.
+        </p>
+      </article>
+
+      <section class="install">
+        <h2>Install</h2>
+        <ol>
+          <li>
+            Clone
+            <a href="https://github.com/scalyxapp-jpg/stretchtext-anywhere">the repository</a>.
+          </li>
+          <li>Open <code>chrome://extensions</code> and turn on Developer mode.</li>
+          <li>Choose <em>Load unpacked</em> and pick the repository folder.</li>
+          <li>Click the toolbar icon, then <em>Connect with Pollinations</em>.</li>
+        </ol>
+        <p class="muted">
+          Reads are paid with the reader's own Pollen: the extension holds a
+          scoped key for seven days and a five-pollen budget. No server, no
+          account of ours, no telemetry.
+        </p>
+        <a
+          class="badge"
+          href="https://pollinations.ai/?ref=badge"
+          target="_blank"
+          rel="noopener"
+        >
+          <img
+            src="https://raw.githubusercontent.com/pollinations/pollinations/main/packages/ui/src/brand/badge-made-with.svg"
+            alt="Made with pollinations.ai"
+          />
+        </a>
+      </section>
+    </main>
+
+    <footer>
+      <p>
+        Words by <a href="https://pollinations.ai">Pollinations</a>. Idea by Ted
+        Nelson. Code by <a href="https://github.com/scalyxapp-jpg">scalyxapp-jpg</a>.
+      </p>
+    </footer>
+
+    <script defer src="https://cdn.jsdelivr.net/npm/@pollinations/ui@0.1.0-alpha.20/dist/connect.js"></script>
+    <script type="module" src="demo.js"></script>
+  </body>
+</html>

@@ -1,0 +1,23 @@
+.stretchtext-segment {
+  background: linear-gradient(transparent 62%, rgba(216, 255, 92, 0.35) 0);
+  border-bottom: 1px dashed rgba(140, 170, 40, 0.55);
+  cursor: zoom-out;
+  border-radius: 2px;
+  transition: background-color 120ms ease;
+}
+
+.stretchtext-segment:hover {
+  background-color: rgba(216, 255, 92, 0.18);
+}
+
+.stretchtext-segment:focus-visible {
+  outline: 2px solid #b6e03a;
+  outline-offset: 1px;
+}
+
+@media print {
+  .stretchtext-segment {
+    background: none;
+    border-bottom: none;
+  }
+}
